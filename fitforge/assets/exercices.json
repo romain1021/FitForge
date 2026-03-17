@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "nom": "Le trône invisible",
+    "description": "Debout, pieds écartés à largeur d'épaules, descendre en fléchissant les genoux jusqu'à ce que les cuisses soient parallèles au sol, comme si tu t'asseyais sur une chaise imaginaire, puis remonter.",
+    "groupe": "jambes",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 2,
+    "nom": "Le pas du chevalier",
+    "description": "Debout, faire un grand pas en avant avec une jambe, fléchir les deux genoux jusqu'à ce que le genou arrière frôle le sol, comme une révérence médiévale, puis revenir à la position initiale.",
+    "groupe": "jambes",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 3,
+    "nom": "La fusée à ressort",
+    "description": "Assis sur la machine de leg press, pieds posés sur la plateforme, propulser la charge en étendant les jambes sans verrouiller les genoux, puis revenir lentement.",
+    "groupe": "jambes",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 4,
+    "nom": "La révérence du spaghetti",
+    "description": "Debout avec une barre, descendre la barre le long des jambes en gardant le dos droit et les hanches en arrière, jusqu'à sentir l'étirement des ischio-jambiers, puis remonter.",
+    "groupe": "jambes",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 5,
+    "nom": "Le funambule du banc",
+    "description": "Pied arrière posé sur un banc, descendre le genou avant vers le sol en gardant le buste droit, puis pousser sur le talon avant pour remonter.",
+    "groupe": "jambes",
+    "duree": 15,
+    "niveau": "avancé"
+  },
+  {
+    "id": 6,
+    "nom": "Le flamant ninja",
+    "description": "Sur une seule jambe, tendre l'autre jambe devant soi, descendre jusqu'en bas de la flexion en gardant l'équilibre, puis remonter en poussant sur le talon.",
+    "groupe": "jambes",
+    "duree": 15,
+    "niveau": "avancé"
+  },
+  {
+    "id": 7,
+    "nom": "La danse des mollets",
+    "description": "Debout sur le bord d'une marche, monter sur la pointe des pieds comme un danseur classique, tenir une seconde en haut, puis descendre lentement.",
+    "groupe": "jambes",
+    "duree": 8,
+    "niveau": "débutant"
+  },
+  {
+    "id": 8,
+    "nom": "Le pont du pharaon",
+    "description": "Allongé sur le dos, pieds à plat au sol, pousser les hanches vers le ciel en contractant les fessiers comme si tu voulais toucher le plafond, tenir, puis redescendre.",
+    "groupe": "jambes",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 9,
+    "nom": "Le grand écarteur",
+    "description": "Assis à la machine de tirage, saisir la barre en prise large, tirer vers le haut de la poitrine comme si tu essayais d'écarter deux murs, puis remonter lentement.",
+    "groupe": "dos",
+    "duree": 12,
+    "niveau": "débutant"
+  },
+  {
+    "id": 10,
+    "nom": "Le rameur borgne",
+    "description": "Un genou et une main appuyés sur un banc, tirer l'haltère vers la hanche d'un seul bras comme si tu démarrais une vieille tondeuse à gazon, puis redescendre.",
+    "groupe": "dos",
+    "duree": 12,
+    "niveau": "débutant"
+  },
+  {
+    "id": 11,
+    "nom": "Le singe royal",
+    "description": "Suspendu à une barre, tirer le corps vers le haut jusqu'à ce que le menton dépasse la barre, comme si tu voulais voir par-dessus un mur, puis descendre lentement.",
+    "groupe": "dos",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 12,
+    "nom": "L'aspirateur géant",
+    "description": "Penché en avant à 45°, tirer la barre vers le bas du ventre en serrant les omoplates comme si tu voulais broyer quelque chose entre elles, puis redescendre.",
+    "groupe": "dos",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 13,
+    "nom": "Le déménageur intergalactique",
+    "description": "Barre au sol, pieds à largeur de hanches, soulever la barre en poussant sur les jambes et en gardant le dos bien droit, comme si tu soulevais un coffre-fort, puis reposer.",
+    "groupe": "dos",
+    "duree": 15,
+    "niveau": "avancé"
+  },
+  {
+    "id": 14,
+    "nom": "La boule de cristal",
+    "description": "À la poulie haute avec une corde, tirer vers le visage en écartant les mains, comme si tu tenais une boule géante devant ton visage et que tu l'écartais de toi.",
+    "groupe": "dos",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 15,
+    "nom": "Le cobra endormi",
+    "description": "Allongé à plat ventre, relever le buste en contractant le bas du dos comme un cobra qui se dresse, tenir une seconde, puis se recoucher doucement.",
+    "groupe": "dos",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 16,
+    "nom": "Le vampire de la barre",
+    "description": "Comme le singe royal, mais tirer suffisamment haut pour amener la poitrine à toucher la barre, les bras complètement pliés au sommet.",
+    "groupe": "dos",
+    "duree": 12,
+    "niveau": "avancé"
+  },
+  {
+    "id": 17,
+    "nom": "Le croco qui cligne",
+    "description": "Allongé sur le dos, genoux fléchis, mains derrière la tête, soulever les épaules comme une mâchoire de crocodile en contractant le ventre, puis redescendre.",
+    "groupe": "abdos",
+    "duree": 8,
+    "niveau": "débutant"
+  },
+  {
+    "id": 18,
+    "nom": "La table de pierre",
+    "description": "En appui sur les avant-bras et les orteils, corps aligné de la tête aux talons, ventre contracté, tenir la position sans bouger comme une statue.",
+    "groupe": "abdos",
+    "duree": 5,
+    "niveau": "débutant"
+  },
+  {
+    "id": 19,
+    "nom": "L'escalade fantôme",
+    "description": "En position de pompe, ramener alternativement chaque genou vers la poitrine rapidement, comme si tu grimpais à toute vitesse une paroi invisible.",
+    "groupe": "abdos",
+    "duree": 8,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 20,
+    "nom": "Le pendule suspendu",
+    "description": "Suspendu à une barre, lever les jambes tendues à l'horizontale sans te balancer, comme une aiguille d'horloge qui monte à midi, puis redescendre lentement.",
+    "groupe": "abdos",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 21,
+    "nom": "Le moulin à prières",
+    "description": "Assis au sol, jambes légèrement levées, tourner le buste de gauche à droite en tenant un poids, comme un essuie-glace humain.",
+    "groupe": "abdos",
+    "duree": 8,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 22,
+    "nom": "Le vampire rigide",
+    "description": "Allongé sur un banc, s'appuyer sur les épaules, lever et descendre le corps entier raide comme une planche en ne touchant que les épaules.",
+    "groupe": "abdos",
+    "duree": 12,
+    "niveau": "avancé"
+  },
+  {
+    "id": 23,
+    "nom": "La roue de la fortune",
+    "description": "À genoux avec la roue abdominale, rouler vers l'avant jusqu'au sol en tendant les bras, puis ramener le corps en contractant le ventre à fond.",
+    "groupe": "abdos",
+    "duree": 10,
+    "niveau": "avancé"
+  },
+  {
+    "id": 24,
+    "nom": "Le chef cuisinier",
+    "description": "Debout, haltères en main, fléchir les coudes pour amener les haltères vers les épaules comme si tu portais deux marmites lourdes, puis reposer.",
+    "groupe": "bras",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 25,
+    "nom": "Le pompier de la corde",
+    "description": "Face à une poulie haute, coudes fixes comme s'ils étaient collés au corps, pousser la corde vers le sol d'un coup sec, puis revenir lentement.",
+    "groupe": "bras",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 26,
+    "nom": "Le marteau de Thor",
+    "description": "Debout, haltères tenus avec les pouces vers le haut comme de vrais marteaux, fléchir les coudes pour les monter, puis redescendre avec contrôle.",
+    "groupe": "bras",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 27,
+    "nom": "Le trampoline inversé",
+    "description": "En appui sur deux barres parallèles, descendre le corps en fléchissant les coudes jusqu'à 90°, puis remonter en explosant sur les triceps.",
+    "groupe": "bras",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 28,
+    "nom": "Le bras de fer du champion",
+    "description": "Debout, saisir une barre les deux mains tournées vers le haut, fléchir les coudes pour monter la barre vers les épaules sans tricher avec le dos, puis redescendre.",
+    "groupe": "bras",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 29,
+    "nom": "Le casse-noisette",
+    "description": "Allongé sur un banc, barre ou haltères au-dessus de la tête, fléchir les coudes pour descendre la charge vers le front comme si tu voulais casser une noix, puis remonter.",
+    "groupe": "bras",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 30,
+    "nom": "Le sloth amoureux",
+    "description": "Assis sur un banc très incliné, laisser les bras pendre librement vers le sol, puis fléchir les coudes lentement. L'inclinaison rend chaque centimètre douloureux.",
+    "groupe": "bras",
+    "duree": 12,
+    "niveau": "avancé"
+  },
+  {
+    "id": 31,
+    "nom": "La promenade du touriste",
+    "description": "Marcher à un rythme soutenu en balançant les bras et en gardant le dos droit. Parfait pour découvrir le plaisir de bouger sans trop souffrir.",
+    "groupe": "cardio",
+    "duree": 30,
+    "niveau": "débutant"
+  },
+  {
+    "id": 32,
+    "nom": "Le dompteur de corde",
+    "description": "Sauter à la corde à rythme régulier, coudes proches du corps, sauts légers. L'objectif : battre ton record de tours sans s'emmêler les pieds.",
+    "groupe": "cardio",
+    "duree": 15,
+    "niveau": "débutant"
+  },
+  {
+    "id": 33,
+    "nom": "Le facteur pressé",
+    "description": "Courir à allure modérée, épaules détendues, bras qui balancent. Imagine que tu as des colis urgents à livrer avant la fermeture.",
+    "groupe": "cardio",
+    "duree": 30,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 34,
+    "nom": "L'écraseur de tomates",
+    "description": "Depuis la position debout, s'accroupir, poser les mains, sauter les pieds en arrière, faire une pompe, ramener les pieds, puis sauter en l'air les bras levés.",
+    "groupe": "cardio",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 35,
+    "nom": "Le cycliste fou",
+    "description": "Sur un vélo stationnaire, alterner des sprints à fond de 20 à 30 secondes avec des phases de récupération de 40 secondes. Grimace autorisée.",
+    "groupe": "cardio",
+    "duree": 20,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 36,
+    "nom": "La tornade de 4 minutes",
+    "description": "8 rounds de 20 secondes de sprint maximum suivis de 10 secondes de récupération. 4 minutes qui semblent durer une éternité.",
+    "groupe": "cardio",
+    "duree": 4,
+    "niveau": "avancé"
+  },
+  {
+    "id": 37,
+    "nom": "Le Viking sur l'eau",
+    "description": "Sur un rameur, pousser fort avec les jambes, puis tirer avec le dos et les bras dans un mouvement fluide. Ramer comme si une tempête approchait.",
+    "groupe": "cardio",
+    "duree": 20,
+    "niveau": "avancé"
+  },
+  {
+    "id": 38,
+    "nom": "Le laveur de vitres géant",
+    "description": "Debout ou assis, haltères au niveau des épaules, pousser vers le haut comme si tu nettoyais un plafond très haut, puis ramener lentement.",
+    "groupe": "épaules",
+    "duree": 12,
+    "niveau": "débutant"
+  },
+  {
+    "id": 39,
+    "nom": "L'envol du pingouin",
+    "description": "Debout, haltères le long du corps, lever les bras sur les côtés comme des ailes jusqu'à l'horizontale, puis les rabattre lentement comme si tu atterrissais.",
+    "groupe": "épaules",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 40,
+    "nom": "Le chef d'orchestre",
+    "description": "Debout, haltères devant les cuisses, lever les bras vers l'avant jusqu'à hauteur des épaules comme si tu dirigeais un orchestre, puis redescendre.",
+    "groupe": "épaules",
+    "duree": 10,
+    "niveau": "débutant"
+  },
+  {
+    "id": 41,
+    "nom": "Le roi soulève son sceptre",
+    "description": "Barre au niveau des clavicules, pousser vers le ciel d'un coup majestueux jusqu'à extension complète, puis redescendre lentement en contrôlant le mouvement.",
+    "groupe": "épaules",
+    "duree": 15,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 42,
+    "nom": "Le tourniquet d'Arnold",
+    "description": "Assis, haltères devant le visage paumes vers soi, ouvrir les bras en rotation tout en poussant vers le haut. Un mouvement spiralé qui déroute les épaules.",
+    "groupe": "épaules",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 43,
+    "nom": "Le plombier qui inspecte",
+    "description": "Debout, tirer la barre vers le haut jusqu'au menton comme si tu voulais regarder par-dessus une clôture, en montant les coudes bien hauts.",
+    "groupe": "épaules",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 44,
+    "nom": "Le catapulteur",
+    "description": "Légère flexion des genoux pour générer de l'élan, puis propulser la barre au-dessus de la tête en une seule poussée explosive.",
+    "groupe": "épaules",
+    "duree": 15,
+    "niveau": "avancé"
+  },
+  {
+    "id": 45,
+    "nom": "Le coffre du pirate",
+    "description": "Allongé sur un banc, haltères de chaque côté comme un trésor à soulever, pousser vers le haut, puis redescendre les coudes légèrement fléchis.",
+    "groupe": "poitrine",
+    "duree": 12,
+    "niveau": "débutant"
+  },
+  {
+    "id": 46,
+    "nom": "Le lézard musclé",
+    "description": "En appui sur les mains et les orteils, descendre la poitrine vers le sol jusqu'à effleurer le carrelage, puis pousser pour remonter le corps bien aligné.",
+    "groupe": "poitrine",
+    "duree": 8,
+    "niveau": "débutant"
+  },
+  {
+    "id": 47,
+    "nom": "Le bulldozer horizontal",
+    "description": "Allongé sur un banc, barre au-dessus de la poitrine, descendre jusqu'au sternum puis pousser avec force pour revenir en position haute.",
+    "groupe": "poitrine",
+    "duree": 15,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 48,
+    "nom": "L'étreinte de l'ours",
+    "description": "Allongé sur un banc, haltères bras presque tendus, descendre les bras en arc de cercle vers les côtés comme si tu ouvrais les bras pour un gros câlin, puis refermer.",
+    "groupe": "poitrine",
+    "duree": 12,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 49,
+    "nom": "Le plongeur du plongeoir",
+    "description": "Aux barres parallèles, se pencher légèrement en avant comme un plongeur prêt à sauter, descendre à 90° puis remonter pour cibler les pectoraux.",
+    "groupe": "poitrine",
+    "duree": 10,
+    "niveau": "intermédiaire"
+  },
+  {
+    "id": 50,
+    "nom": "Le sculpteur de diamant",
+    "description": "Comme la pompe classique mais les mains rapprochées en formant un losange sous la poitrine. Difficile mais très efficace pour la partie interne.",
+    "groupe": "poitrine",
+    "duree": 15,
+    "niveau": "avancé"
+  }
+]
