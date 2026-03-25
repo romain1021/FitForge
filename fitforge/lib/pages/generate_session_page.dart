@@ -8,8 +8,8 @@ class GenerateSessionPage extends StatefulWidget {
 }
 
 class _GenerateSessionPageState extends State<GenerateSessionPage> {
-  static const int _minDuration = 10;
-  static const int _maxDuration = 180;
+  static const int _minDuration = 4;
+  static const int _maxDuration = 90;
 
   int _durationMinutes = 30;
   double _difficulty = 0;
