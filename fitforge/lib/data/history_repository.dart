@@ -12,7 +12,38 @@ class HistoryRepository {
   static const String _assetPath = 'assets/historique.json';
   static const String _fileName = 'historique.json';
 
+  Future<String> _loadInitialContent() async {
+    try {
+      return await rootBundle.loadString(_assetPath);
+    } catch (_) {
+      return '[]';
+    }
+  }
+
+  Future<File?> _getWorkspaceHistoryFileIfWritable() async {
+    final File workspaceFile = File(_assetPath);
+
+    if (!await workspaceFile.exists()) {
+      return null;
+    }
+
+    try {
+      final String content = await workspaceFile.readAsString();
+      if (content.trim().isEmpty) {
+        await workspaceFile.writeAsString('[]', flush: true);
+      }
+      return workspaceFile;
+    } catch (_) {
+      return null;
+    }
+  }
+
   Future<File> _getHistoryFile() async {
+    final File? workspaceFile = await _getWorkspaceHistoryFileIfWritable();
+    if (workspaceFile != null) {
+      return workspaceFile;
+    }
+
     final Directory directory = await getApplicationDocumentsDirectory();
     final File historyFile = File('${directory.path}/$_fileName');
 
@@ -20,7 +51,7 @@ class HistoryRepository {
       return historyFile;
     }
 
-    final String initialContent = await rootBundle.loadString(_assetPath);
+    final String initialContent = await _loadInitialContent();
     await historyFile.writeAsString(initialContent, flush: true);
     return historyFile;
   }
