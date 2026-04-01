@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:isolate';
 
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
@@ -12,6 +13,54 @@ class HistoryRepository {
   static const String _assetPath = 'assets/historique.json';
   static const String _fileName = 'historique.json';
 
+  List<File> _workspaceHistoryCandidates() {
+    final Set<String> candidatePaths = <String>{
+      _assetPath,
+      '${Directory.current.path}/$_assetPath',
+      '${Directory.current.path}/assets/$_fileName',
+    };
+
+    Directory cursor = Directory.current;
+    for (int i = 0; i < 10; i++) {
+      candidatePaths.add('${cursor.path}/assets/$_fileName');
+      final Directory parent = cursor.parent;
+      if (parent.path == cursor.path) {
+        break;
+      }
+      cursor = parent;
+    }
+
+    return candidatePaths.map((path) => File(path)).toList(growable: false);
+  }
+
+  Future<void> _addScriptBasedCandidates(Set<String> candidatePaths) async {
+    final Uri scriptUri = Platform.script;
+    if (scriptUri.scheme == 'file') {
+      final Directory scriptDir = File.fromUri(scriptUri).parent;
+      Directory cursor = scriptDir;
+      for (int i = 0; i < 12; i++) {
+        candidatePaths.add('${cursor.path}/assets/$_fileName');
+        final Directory parent = cursor.parent;
+        if (parent.path == cursor.path) {
+          break;
+        }
+        cursor = parent;
+      }
+    }
+
+    final Uri? packageMainUri = await Isolate.resolvePackageUri(
+      Uri.parse('package:fitforge/main.dart'),
+    );
+
+    if (packageMainUri == null || packageMainUri.scheme != 'file') {
+      return;
+    }
+
+    final Directory libDir = File.fromUri(packageMainUri).parent;
+    final Directory projectRoot = libDir.parent;
+    candidatePaths.add('${projectRoot.path}/assets/$_fileName');
+  }
+
   Future<String> _loadInitialContent() async {
     try {
       return await rootBundle.loadString(_assetPath);
@@ -21,21 +70,29 @@ class HistoryRepository {
   }
 
   Future<File?> _getWorkspaceHistoryFileIfWritable() async {
-    final File workspaceFile = File(_assetPath);
+    final Set<String> candidatePaths = _workspaceHistoryCandidates()
+        .map((file) => file.path)
+        .toSet();
+    await _addScriptBasedCandidates(candidatePaths);
 
-    if (!await workspaceFile.exists()) {
-      return null;
-    }
-
-    try {
-      final String content = await workspaceFile.readAsString();
-      if (content.trim().isEmpty) {
-        await workspaceFile.writeAsString('[]', flush: true);
+    for (final String path in candidatePaths) {
+      final File workspaceFile = File(path);
+      if (!await workspaceFile.exists()) {
+        continue;
       }
-      return workspaceFile;
-    } catch (_) {
-      return null;
+
+      try {
+        final String content = await workspaceFile.readAsString();
+        if (content.trim().isEmpty) {
+          await workspaceFile.writeAsString('[]', flush: true);
+        }
+        return workspaceFile;
+      } catch (_) {
+        continue;
+      }
     }
+
+    return null;
   }
 
   Future<File> _getHistoryFile() async {
@@ -83,7 +140,9 @@ class HistoryRepository {
     ];
 
     final File file = await _getHistoryFile();
-    final String json = jsonEncode(updated.map((entry) => entry.toJson()).toList());
+    final String json = jsonEncode(
+      updated.map((entry) => entry.toJson()).toList(),
+    );
     await file.writeAsString(json, flush: true);
   }
 }
