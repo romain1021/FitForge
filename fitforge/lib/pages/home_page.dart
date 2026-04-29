@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'exercise_list_page.dart';
 import 'generate_session_page.dart';
-import 'history_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -43,18 +42,6 @@ class HomePage extends StatelessWidget {
                 },
                 icon: const Icon(Icons.fitness_center),
                 label: const Text('Catalogue'),
-              ),
-              const SizedBox(height: 12),
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (context) => const HistoryPage(),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.history),
-                label: const Text('Historique'),
               ),
             ],
           ),

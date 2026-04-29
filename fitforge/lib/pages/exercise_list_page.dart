@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../data/exercise_repository.dart';
-import '../data/history_repository.dart';
 import '../models/exercise.dart';
 
 enum ExerciseSortOption {
@@ -21,7 +20,6 @@ class ExerciseListPage extends StatefulWidget {
 
 class _ExerciseListPageState extends State<ExerciseListPage> {
   late final Future<List<Exercise>> _exercisesFuture;
-  final HistoryRepository _historyRepository = const HistoryRepository();
   String _searchQuery = '';
   ExerciseSortOption _sortOption = ExerciseSortOption.nameAsc;
 
@@ -38,32 +36,6 @@ class _ExerciseListPageState extends State<ExerciseListPage> {
   void initState() {
     super.initState();
     _exercisesFuture = const ExerciseRepository().loadExercises();
-  }
-
-  Future<void> _addExerciseToHistory(Exercise exercise) async {
-    try {
-      await _historyRepository.addExercise(exercise.id);
-      if (!mounted) {
-        return;
-      }
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('${exercise.name} ajoute a l\'historique.'),
-          duration: const Duration(seconds: 2),
-        ),
-      );
-    } catch (_) {
-      if (!mounted) {
-        return;
-      }
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Erreur pendant l\'ajout a l\'historique.'),
-        ),
-      );
-    }
   }
 
   List<Exercise> _applySearchAndSort(List<Exercise> exercises) {
@@ -248,14 +220,6 @@ class _ExerciseListPageState extends State<ExerciseListPage> {
                                             context,
                                           ).textTheme.titleMedium,
                                         ),
-                                      ),
-                                      IconButton(
-                                        tooltip:
-                                            'Ajouter cet exercice a l\'historique',
-                                        onPressed: () {
-                                          _addExerciseToHistory(exercise);
-                                        },
-                                        icon: const Icon(Icons.add_circle_outline),
                                       ),
                                     ],
                                   ),

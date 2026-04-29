@@ -15,6 +15,6 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     expect(find.text('Accueil FitForge'), findsOneWidget);
-    expect(find.byType(ElevatedButton), findsNWidgets(3));
+    expect(find.byType(ElevatedButton), findsNWidgets(2));
   });
 }
