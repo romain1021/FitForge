@@ -1,0 +1,61 @@
+// Fonctions de tri et de normalisation extraites de lib/pages/exercise_list_page.dart
+
+List<Exercise> _applySearchAndSort(List<Exercise> exercises) {
+  final String query = _normalizeText(_searchQuery.trim());
+
+  final List<Exercise> filtered = exercises
+      .where((exercise) {
+        if (query.isEmpty) {
+          return true;
+        }
+
+        final String content = _normalizeText(
+          '${exercise.name} ${exercise.description} ${exercise.group} ${exercise.level}',
+        );
+        return content.contains(query);
+      })
+      .toList(growable: false);
+
+  final List<Exercise> sorted = List<Exercise>.from(filtered);
+  sorted.sort(_exerciseComparator);
+  return sorted;
+}
+
+int _exerciseComparator(Exercise a, Exercise b) {
+  switch (_sortOption) {
+    case ExerciseSortOption.nameAsc:
+      return _normalizeText(a.name).compareTo(_normalizeText(b.name));
+    case ExerciseSortOption.durationAsc:
+      return a.durationMinutes.compareTo(b.durationMinutes);
+    case ExerciseSortOption.durationDesc:
+      return b.durationMinutes.compareTo(a.durationMinutes);
+    case ExerciseSortOption.levelAsc:
+      final int aLevel = _levelOrder[_normalizeText(a.level)] ?? 99;
+      final int bLevel = _levelOrder[_normalizeText(b.level)] ?? 99;
+      return aLevel.compareTo(bLevel);
+    case ExerciseSortOption.groupAsc:
+      return _normalizeText(a.group).compareTo(_normalizeText(b.group));
+  }
+}
+
+String _normalizeText(String input) {
+  return input
+      .toLowerCase()
+      .replaceAll('à', 'a')
+      .replaceAll('á', 'a')
+      .replaceAll('â', 'a')
+      .replaceAll('ä', 'a')
+      .replaceAll('ç', 'c')
+      .replaceAll('è', 'e')
+      .replaceAll('é', 'e')
+      .replaceAll('ê', 'e')
+      .replaceAll('ë', 'e')
+      .replaceAll('î', 'i')
+      .replaceAll('ï', 'i')
+      .replaceAll('ô', 'o')
+      .replaceAll('ö', 'o')
+      .replaceAll('ù', 'u')
+      .replaceAll('ú', 'u')
+      .replaceAll('û', 'u')
+      .replaceAll('ü', 'u');
+}
